@@ -4,6 +4,8 @@ import com.atguigu.springcloud.entities.CommonResult;
 import com.atguigu.springcloud.entities.Payment;
 import com.atguigu.springcloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 @RestController
+@MapperScan("com.atguigu.springcloud.dao")
 @Slf4j
 public class PaymentController {
 
@@ -34,6 +37,7 @@ public class PaymentController {
     @GetMapping(value="/payment/{id}")
     public CommonResult getPaymentById(@PathVariable("id") Long id){
         Payment payment =  paymentService.getPaymentById(id);
+        //Payment payment = null;
         log.info("****查詢結果****" + payment);
 
         if(payment != null ){
@@ -42,6 +46,10 @@ public class PaymentController {
             return new CommonResult(444, "查詢失敗, id:" + id);
         }
 
+    }
+    @GetMapping(value="/test")
+    public String test(){
+        return "test";
     }
 
 }
