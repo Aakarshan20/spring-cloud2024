@@ -8,7 +8,23 @@
 4. 主啟動
 5. 業務類
 6. 測試
+***
+### modules
+***
+- cloud-api-commons
+  - 共用工具類與實體類 ( entities )
+  - 不對外開放
+  
 
+- cloud-provider-payment8081
+  - 支付類 ( 生產微服務 )
+  - 開放 8081 port
+  
+
+- cloud-consumer-order80
+  - 使用者下訂單 ( 消費者微服務 )
+  - 開放 80 port
+***
 ### 更新日誌
 ***
 
