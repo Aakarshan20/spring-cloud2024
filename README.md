@@ -1,5 +1,14 @@
 # spring-cloud
 
+### 步驟
+***
+1. 建module
+2. 改pom
+3. 寫yml
+4. 主啟動
+5. 業務類
+6. 測試
+
 ### 更新日誌
 ***
 
@@ -18,3 +27,7 @@
 - table.sql
 *** 
 - 修正mybatis連線問題
+*** 
+- 添加熱加載
+- *** 
+- 添加 Order module 模擬客戶端 充當spring cloud 的消費者
