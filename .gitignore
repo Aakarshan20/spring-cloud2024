@@ -1,1 +1,3 @@
 .idea/
+.cloud-provider-payment8081/target/
+.cloud-consumer-payment80/target/
