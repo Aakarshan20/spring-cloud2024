@@ -24,10 +24,12 @@
 - cloud-consumer-order80
   - 使用者下訂單 ( 消費者微服務 )
   - 開放 80 port
+- cloud-eureka-server7001
+  - eureka 註冊中心
+  - 開放 7001 port
 ***
 ### 更新日誌
 ***
-
 - 添加父類
 - 添加支付類 module
 ***
@@ -45,5 +47,7 @@
 - 修正mybatis連線問題
 *** 
 - 添加熱加載
-- *** 
+*** 
 - 添加 Order module 模擬客戶端 充當spring cloud 的消費者
+- *** 
+- 添加 Eureka 服務註冊中心
