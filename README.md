@@ -53,3 +53,4 @@
 - 添加 hosts 映射
 - 添加 eureka-server-7001
 - 搭建 eureka 集群
+- 把支付( payment ) ,訂單( order )  加入集群
