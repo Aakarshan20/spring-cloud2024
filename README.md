@@ -48,3 +48,4 @@
 - 添加 Eureka 服務註冊中心
 - 支付 8001 入駐進 eureka server
 - 更正支付 module 名稱 8081->8001
+- 訂單 80 入駐進 eureka server
