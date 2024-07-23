@@ -1,7 +1,7 @@
 # spring-cloud
 ***
 ### 步驟
-***
+
 1. 建module
 2. 改pom
 3. 寫yml
@@ -10,7 +10,7 @@
 6. 測試
 ***
 ### modules
-***
+
 - cloud-api-commons
   - 共用工具類與實體類 ( entities )
   - 不對外開放
@@ -29,10 +29,9 @@
   - 開放 7001 port
 ***
 ### 更新日誌
-***
+
 - 添加父類
 - 添加支付類 module
-***
 - db連線設定
 - 通用返回接口
 - 實體類
@@ -43,11 +42,9 @@
 - service(interface 調用Dao)
 - serviceImpl(實現service)
 - table.sql
-*** 
 - 修正mybatis連線問題
-*** 
 - 添加熱加載
-*** 
 - 添加 Order module 模擬客戶端 充當spring cloud 的消費者
-- *** 
 - 添加 Eureka 服務註冊中心
+- 支付 8001 入駐進 eureka server
+- 更正支付 module 名稱 8081->8001

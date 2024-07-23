@@ -10,3 +10,7 @@ eureka:
     service-url:
         # 設置與 eureka server 交互的地址查詢服務和註冊服務都需要依賴這個地址
         defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+
+  server:
+    enable-self-preservation: false # 禁用自我保護模式
+    eviction-interval-timer-in-ms: 60000 # 驅逐間隔時間設置為1分鐘
