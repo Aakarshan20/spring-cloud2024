@@ -49,3 +49,7 @@
 - 支付 8001 入駐進 eureka server
 - 更正支付 module 名稱 8081->8001
 - 訂單 80 入駐進 eureka server
+- 修改總工程 pom.xml: <module>cloud-provider-payment8081</module> -> <module>cloud-provider-payment8001</module>
+- 添加 hosts 映射
+- 添加 eureka-server-7001
+- 搭建 eureka 集群
