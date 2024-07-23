@@ -67,5 +67,21 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
-
+    <profiles>
+        <profile>
+            <id>local1</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <activeProfile>local1</activeProfile>
+            </properties>
+        </profile>
+        <profile>
+            <id>local2</id>
+            <properties>
+                <activeProfile>local2</activeProfile>
+            </properties>
+        </profile>
+    </profiles>
 </project>

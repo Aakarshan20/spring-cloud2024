@@ -1,3 +1,13 @@
 .idea/
 .cloud-provider-payment8081/target/
 .cloud-consumer-payment80/target/
+.cloud-api-commons/target/
+.cloud-consumer-order80/target/
+.cloud-eureka-server7001/target/
+.cloud-eureka-server7002/target/
+.cloud-provider-payment8001/target/classes/application-local1.yml
+.cloud-provider-payment8001/target/classes/application-local2.yml
+.cloud-provider-payment8001/target/classes/com/atguigu/springcloud/controller/
+.cloud-provider-payment8001/target/classes/com/atguigu/springcloud/dao/
+.cloud-provider-payment8001/target/classes/com/atguigu/springcloud/service/
+.cloud-provider-payment8001/target/classes/mapper/
