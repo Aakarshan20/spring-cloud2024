@@ -37,10 +37,10 @@
 - 實體類
 - 控制器
 - 查詢數據庫成功
-- Dao(interface)
-- mapper.xml(對應dao)
-- service(interface 調用Dao)
-- serviceImpl(實現service)
+- Dao ( interface )
+- mapper.xml ( 對應 dao )
+- service ( interface 調用 Dao )
+- serviceImpl ( 實現 service )
 - table.sql
 - 修正mybatis連線問題
 - 添加熱加載
@@ -53,4 +53,14 @@
 - 添加 hosts 映射
 - 添加 eureka-server-7001
 - 搭建 eureka 集群
-- 把支付( payment ) ,訂單( order )  加入集群
+- 支付( payment ) ,訂單( order ) 註冊入集群  
+- eureka server ( 7001, 7002 ) 開啟自我保護機制
+- eureka renewal-percent-threshold 改為0.85
+- eureka 開啟自我保護機制
+- 添加 payment8002 module, 把支付( payment ) 變成集群
+- eureka 關閉自我保護機制
+- eureka renewal-percent-threshold: 0.45 
+- 增加 payment 8002 module
+- 修改 order 80 config: 加上負載均衡機制
+- 修改 order 80 controller: 將地址改為微服務代號
+- payment 8001, 8002 回傳 port 號, 驗證負載均衡功能
