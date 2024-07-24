@@ -41,6 +41,39 @@ http://127.0.0.1:8001/actuator/health
 
 ***
 
+### 錯誤排除
+
+- eureka故障現象
+  - eureka 自我保護機制>某時刻某個微服務不可用時(默認90秒 沒有收到心跳反應), eureka不會立刻清理, 防止誤刪除, 依舊會對該服務的信息進行保存
+  - 寧可保留錯誤的服務註冊信息, 也不盲目註銷任何可能健康的服務實例
+  - 關閉自我保護機制 
+    - 關閉自我保護
+```
+eureka:
+  server:
+    enable-self-preservation: false # 自我保護模式關閉 就代表服務一斷線就會被剔除服務清單
+```
+
+  - 將出現以下信息
+```
+THE SELF PRESERVATION MODE IS TURNED OFF. THIS MAY NOT PROTECT INSTANCE EXPIRY IN CASE OF NETWORK/OTHER PROBLEMS
+```
+
+  - 修改發送心跳時間間隔
+```
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 1 # 發送心跳的時間間隔(默認30秒)
+```
+
+  - 屬於CAP理論的AP分支 
+  ```
+  https://medium.com/@thegiive/cap-%E7%90%86%E8%AB%96-19cd81c82658
+  ```
+  
+
+
+
 ### 更新日誌
 
 - 添加父類
@@ -82,3 +115,4 @@ http://127.0.0.1:8001/actuator/health
 - 修改 payment 8001, 8002 application.yml  將重複的配置提出
 - 添加服務發現的controller
 - 將 8001, 8002 application.yml 重複的配置移到外面
+- 測試與配置自我保護機制( see 7001, 7002, 8001, 8002 application.yml)
