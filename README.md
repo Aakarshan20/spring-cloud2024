@@ -16,9 +16,9 @@
   - 不對外開放
   
 
-- cloud-provider-payment8081
+- cloud-provider-payment8081, 8082
   - 支付類 ( 生產微服務 )
-  - 開放 8081 port
+  - 開放 8081, 8082 port
   
 
 - cloud-consumer-order80
@@ -28,6 +28,19 @@
   - eureka 註冊中心
   - 開放 7001 port
 ***
+
+### 常用功能
+- 心跳檢查
+```
+http://127.0.0.1:8001/actuator/health
+```
+  - 返回結果範例
+```
+{"status":"UP"}
+```
+
+***
+
 ### 更新日誌
 
 - 添加父類
@@ -64,3 +77,6 @@
 - 修改 order 80 config: 加上負載均衡機制
 - 修改 order 80 controller: 將地址改為微服務代號
 - payment 8001, 8002 回傳 port 號, 驗證負載均衡功能
+- 修改 eureka 上的主機名稱
+- 訪問信息帶有 ip 提示
+- 修改 payment 8001, 8002 application.yml  將重複的配置提出
