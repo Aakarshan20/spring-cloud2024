@@ -14,19 +14,21 @@
 - cloud-api-commons
   - 共用工具類與實體類 ( entities )
   - 不對外開放
-  
+
 
 - cloud-provider-payment8081, 8082
   - 支付類 ( 生產微服務 )
   - 開放 8081, 8082 port
-  
+
 
 - cloud-consumer-order80
   - 使用者下訂單 ( 消費者微服務 )
   - 開放 80 port
-- cloud-eureka-server7001
+
+
+- cloud-eureka-server7001, 7002
   - eureka 註冊中心
-  - 開放 7001 port
+  - 開放 7001, 7002 port
 ***
 
 ### 常用功能
