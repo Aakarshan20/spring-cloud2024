@@ -80,3 +80,5 @@ http://127.0.0.1:8001/actuator/health
 - 修改 eureka 上的主機名稱
 - 訪問信息帶有 ip 提示
 - 修改 payment 8001, 8002 application.yml  將重複的配置提出
+- 添加服務發現的controller
+- 將 8001, 8002 application.yml 重複的配置移到外面

@@ -1,6 +1,8 @@
 spring:
   profiles:
     active: local1
+  application:
+    name: cloud-payment-service
 
 server:
   port: 8001
